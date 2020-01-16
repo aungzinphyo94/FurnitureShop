@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:nestedScrollingEnabled="false">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/txt_discover"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_16"
+            android:text="@string/txt_discover"
+            android:fontFamily="@font/firasan_bold"
+            android:textSize="24sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_discover"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@id/txt_discover"
+            app:layout_constraintTop_toBottomOf="@id/txt_discover" />
+
+        <TextView
+            android:id="@+id/txt_trending"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/trending"
+            app:layout_constraintLeft_toLeftOf="@id/txt_discover"
+            app:layout_constraintTop_toBottomOf="@id/recycler_discover" />
+
+        <TextView
+            android:id="@+id/txt_show_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/show_all"
+            app:layout_constraintBaseline_toBaselineOf="@id/txt_trending"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_trending"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/txt_trending" />
+
+        <TextView
+            android:id="@+id/txt_best_selling"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Best Selling"
+            app:layout_constraintLeft_toLeftOf="@id/txt_discover"
+            app:layout_constraintTop_toBottomOf="@id/recycler_trending"/>
+
+        <TextView
+            android:id="@+id/txt_show_all_best"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Show all"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBaseline_toBaselineOf="@id/txt_best_selling"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_best_selling"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/txt_best_selling" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

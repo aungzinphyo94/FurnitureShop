@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FurnitureShop</string>
+
+    <string name="txt_discover">Discover</string>
+    <string name="trending">Trending</string>
+    <string name="show_all">Show All</string>
+</resources>

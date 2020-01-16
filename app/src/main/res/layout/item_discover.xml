@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/dimen_8"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/image_card"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        app:cardCornerRadius="@dimen/dimen_8"
+        app:cardElevation="@dimen/dimen_4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <ImageView
+            android:id="@+id/image_discover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/chair"
+            android:scaleType="centerCrop"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/name_discover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chairs"
+        app:layout_constraintTop_toBottomOf="@id/image_card"
+        app:layout_constraintLeft_toLeftOf="@id/image_card"/>
+
+    <TextView
+        android:id="@+id/count_discover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1234"
+        app:layout_constraintTop_toBottomOf="@id/name_discover"
+        app:layout_constraintLeft_toLeftOf="@id/image_card"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="items"
+        android:layout_margin="@dimen/dimen_4"
+        app:layout_constraintBaseline_toBaselineOf="@id/count_discover"
+        app:layout_constraintLeft_toRightOf="@id/count_discover"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
